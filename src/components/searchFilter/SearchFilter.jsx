@@ -6,7 +6,7 @@ import Button from '../primaryButton/Button'
 const SearchFilter = () => {
   return (
     <>
-    <div className="mt-6 bg-white p-4 rounded-lg flex flex-col lg:flex-row gap-4 min-h-[77px]">
+    <div className="mt-6 bg-white p-4 rounded-lg flex flex-col 1xl:flex-row gap-4 min-h-[77px]">
         <input
           type="text"
           placeholder="Job Title, Company, or Keywords"
