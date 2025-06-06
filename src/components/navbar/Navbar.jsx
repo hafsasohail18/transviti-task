@@ -29,7 +29,8 @@ const Navbar = () => {
         <div className="flex items-center space-x-5 2xl:space-x-8">
           <img src={logo} alt="Logo" />
           <span className="text-[16px] font-[600] md:text-[14px] lg:text-[16px] text-blue">Find Jobs</span>
-          <ul className="hidden lg:flex space-x-5 2xl:space-x-7 text-gray font-[500] text-[16px] md:text-[14px] xl:text-[14px] xxl:text-[16px]">
+          <ul className="hidden lg:flex flex-wrap gap-x-4 gap-y-2 text-gray font-[500] text-[14px] xl:text-[14px] xxl:text-[16px]">
+
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link to={link.path} className="hover:text-blue cursor-pointer">

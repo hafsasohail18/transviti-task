@@ -10,11 +10,11 @@ const CardComponent = ({featuredJobs}) => {
 
   return (
     <>
-        <div className="grid grid-cols-2 sm:grid-cols-3 1xl:grid-cols-4 xxl:grid-cols-5 2xl:grid-cols-6 gap-4 ">
+        <div className="grid grid-cols-2 1xl:grid-cols-4 xxl2:grid-cols-5 2xl:grid-cols-6 gap-4 ">
         {featuredJobs.map((job) => (
           <div
             key={job.id}
-            className="bg-white p-2 max-w-[182px] min-h-[164px] rounded-lg border border-gray-200 flex flex-col justify-between"
+            className="bg-white p-2 min-w-[182px] min-h-[164px] rounded-lg border border-gray-200 flex flex-col justify-between"
           >
             {job.promoted && (
               <span className="text-[10px] font-[600] text-black mb-1">Promoted</span>
