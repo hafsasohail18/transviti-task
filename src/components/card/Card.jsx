@@ -10,7 +10,7 @@ const CardComponent = ({featuredJobs}) => {
 
   return (
     <>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xxl:grid-cols-5 2xl:grid-cols-6 gap-4 ">
+        <div className="grid grid-cols-2 sm:grid-cols-3 1xl:grid-cols-4 xxl:grid-cols-5 2xl:grid-cols-6 gap-4 ">
         {featuredJobs.map((job) => (
           <div
             key={job.id}
