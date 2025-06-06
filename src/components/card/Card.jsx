@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import jobImg from '../../assets/jobImg.png'
 import { IoLocationOutline } from 'react-icons/io5';
 import { IoMdTime } from 'react-icons/io';
@@ -6,11 +6,18 @@ import { FiBookmark } from 'react-icons/fi';
 import Button from '../primaryButton/Button';
 
 const CardComponent = ({featuredJobs}) => {
-   
+  const [highlightedJobs, setHighlightedJobs] = useState({});
+
+  const toggleHighlight = (jobId) => {
+    setHighlightedJobs(prev => ({
+      ...prev,
+      [jobId]: !prev[jobId]
+    }));
+  };
 
   return (
     <>
-        <div className="grid grid-cols-2 1xl:grid-cols-4 xxl2:grid-cols-5 2xl:grid-cols-6 gap-4 ">
+        <div className="grid grid-cols-2 1xl:grid-cols-4 xxl2:grid-cols-5 2xl:grid-cols-6 gap-4">
         {featuredJobs.map((job) => (
           <div
             key={job.id}
@@ -24,7 +31,6 @@ const CardComponent = ({featuredJobs}) => {
                 <img
                   src={jobImg}
                   alt="Teams"
-                 
                 />
               </div>
               <div>
@@ -45,8 +51,13 @@ const CardComponent = ({featuredJobs}) => {
             </div>
             <div className="flex items-center gap-2">
               <Button text="Apply Now" className="text-[12px] h-[34px] flex-1" />
-              <button className="p-2 rounded-md hover:bg-gray-50 transition flex items-center justify-center">
-                <FiBookmark className="w-5 h-5 text-gray-500" />
+              <button 
+                onClick={() => toggleHighlight(job.id)}
+                className="p-2 rounded-md hover:bg-gray-50 transition flex items-center justify-center"
+              >
+                <FiBookmark 
+                  className={`w-5 h-5 ${highlightedJobs[job.id] ? 'text-blue' : 'text-gray-500'}`} 
+                />
               </button>
             </div>
           </div>
