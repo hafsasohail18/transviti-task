@@ -13,6 +13,7 @@ const Button = ({ text, className = "", icon: Icon }) => {
         items-center
         justify-center
         gap-2
+        cursor-pointer
         ${className}
       `}
     >

@@ -38,7 +38,7 @@ const SearchFilter = () => {
           {["Frontend", "Backend", "Graphic Designer"].map((tag) => (
             <button
               key={tag}
-              className="px-4 py-1 font-[400] text-[14px] border-1 border-gray rounded-lg text-sm text-gray hover:bg-gray-100 transition"
+              className="px-4 py-1 font-[400] text-[14px] border-1 border-gray rounded-lg text-sm text-gray hover:bg-gray-100 transition cursor-pointer"
             >
               {tag}
             </button>
